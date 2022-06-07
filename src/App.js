@@ -3,8 +3,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className="w-1/2 m-auto">
+      hi
     </div>
   );
 }
