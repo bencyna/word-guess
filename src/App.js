@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="w-1/2 m-auto">
-      his
+      hi 
     </div>
   );
 }
