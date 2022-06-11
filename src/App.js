@@ -1,11 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { StoreProvider } from "./Utils/GlobalState";
+import Play from "./Pages/Play/Play"
+
 
 function App() {
   return (
-    <div className="w-1/2 m-auto">
-      hi 
+    <Router>
+    <div>
+      <StoreProvider>
+        <Switch>
+          <>
+            <Route exact path="/pending/event/" component={Play}/>
+          </>
+        </Switch>
+      </StoreProvider>
     </div>
+  </Router>
   );
 }
 
