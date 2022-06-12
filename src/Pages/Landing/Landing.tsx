@@ -1,7 +1,12 @@
 import React from 'react'
+import Navbar from "../../Components/Navbar/Navbar.tsx"
+
 
 export default function Landing() {
   return (
-    <div>Landing</div>
+    <div>
+        <Navbar/>
+        Landing
+    </div>
   )
 }
