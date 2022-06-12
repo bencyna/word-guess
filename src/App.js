@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { StoreProvider } from "./Utils/GlobalState";
 import Play from "./Pages/Play/Play"
+import Landing from "./Pages/Landing/Landing"
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <StoreProvider>
         <Switch>
           <>
-            <Route exact path="/pending/event/" component={Play}/>
+            <Route exact path="/" component={Landing}/>
+            <Route exact path="/play" component={Play}/>
           </>
         </Switch>
       </StoreProvider>
