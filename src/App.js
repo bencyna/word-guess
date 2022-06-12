@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { StoreProvider } from "./Utils/GlobalState.tsx";
 import Play from "./Pages/Play/Play.tsx"
 import Landing from "./Pages/Landing/Landing.tsx"
+import Navbar from "./Components/Navbar/Navbar.tsx"
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <Router>
     <div>
       <StoreProvider>
+        <Navbar/>
         <Routes>
           <>
             <Route exact path="/" element={<Landing/>}/>
