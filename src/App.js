@@ -13,8 +13,8 @@ function App() {
       <StoreProvider>
         <Routes>
           <>
-            <Route exact path="/" component={Landing}/>
-            <Route exact path="/play" component={Play}/>
+            <Route exact path="/" element={<Landing/>}/>
+            <Route exact path="/play" element={<Play/>}/>
           </>
         </Routes>
       </StoreProvider>
