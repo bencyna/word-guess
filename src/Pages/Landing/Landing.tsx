@@ -6,9 +6,9 @@ export default function Landing() {
     <div className="">
       <Navbar />
       <div className="w-1/2 m-auto">
-        <div id="gameOptions" className=" w-1/2 align-center justify-content m-auto">
-          <button className="px-24 py-12 bg-blue-600 border-r-3xl">
-            Play now h
+        <div id="gameOptions" className="mt-44 w-1/2 m-auto border p-44">
+          <button className="text-white px-24 py-6 bg-blue-600 rounded-3xl relative right-24 hover:text-gray-200">
+            Play Locally
           </button>
         </div>
       </div>
