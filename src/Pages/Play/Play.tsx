@@ -28,7 +28,7 @@ export default function Play() {
           <Input type="number" class = {{}} onChange={playersOnChange} value={playersNumber} text="Number of players" name="playersNumber" id="playersNumber" placeholder="0"/>
           <div className="players">
           {Array.apply(null, {length: playersNumber}).map((i) => (
-          <Input id={`players${i}`} type="number" class = {{}} onChange={playerNameChange} text="Player name" name={`playerName${i}`} placeholder="Player Name"/>
+          <Input id={`players${i}`} type="text" class = {{}} onChange={playerNameChange} text="Player name" name={`playerName${i}`} placeholder="Player Name"/>
           ))}
           </div>
           <Button text="Play"/>
