@@ -9,11 +9,18 @@ export default function Play() {
     <div>
       <Navbar />
       <div className="playersChice">
-        {playersNumber <= 1 ? (<div>
+        {playersNumber <= 1 ? (
+        <div className="w-1/2 m-auto mt-24 w-1/2 m-auto border p-24">
+          <h3 className="text-2xl">
           choose how many players
-        </div>) : (<div>
+          </h3>
+          
+        </div>
+        ) : (
+        <div>
           player
-        </div>)}
+        </div>
+        )}
       </div>
     </div>
   )
