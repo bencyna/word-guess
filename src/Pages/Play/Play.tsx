@@ -21,6 +21,7 @@ export default function Play() {
         {!play ? (
         <div className="md:w-1/2 m-auto md:mt-24 border p-24">
           <Input type="number" class = {{}} onChange={playersOnChange} value={playersNumber} text="Number of players" name="playersNumber" id="playersNumber" placeholder="0"/>
+          <div></div>
           <Button text="Play"/>
         </div>
         ) : (
