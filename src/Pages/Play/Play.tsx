@@ -1,13 +1,15 @@
 import React, {useState} from 'react'
+import Navbar from "../../Components/Navbar/Navbar.tsx";
+
 
 export default function Play() {
   const [playersNumber, setPlayerNumbers] = useState(0);
 
   return (
     <div>
-      {/* How many players? */}
+      <Navbar />
       <div className="playersChice">
-        {playersNumber < 0 ? (<div>
+        {playersNumber <= 1 ? (<div>
           choose how many players
         </div>) : (<div>
           player
