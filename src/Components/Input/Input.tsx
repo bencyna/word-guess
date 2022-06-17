@@ -12,6 +12,7 @@ export default function Input(props) {
           id={props.id}
           className={`block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm ${props.class.input}`}
           placeholder={props.placeholder}
+          onChange={props.onChange}
         />
       </div>
     )
