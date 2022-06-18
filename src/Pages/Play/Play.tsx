@@ -7,7 +7,6 @@ import Players from "../../Classes/player_class.tsx"
 export default function Play() {
   const [playersNumber, setPlayerNumbers] = useState(0);
   const [play, setPlay] = useState(false);
-  const [players, setPlayers] = useState({});
 
   const playersOnChange = (e) => {
     if (e.target.value > 6) {
@@ -18,6 +17,11 @@ export default function Play() {
 
   const playerNameChange = (e) => {
     // add to list of players
+    // find best way to add dynamic input to state
+    for (let i = 0; i<=playersNumber; i++) {
+      // create player object
+      
+    }
   }
 
   return (
