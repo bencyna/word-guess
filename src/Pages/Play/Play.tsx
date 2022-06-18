@@ -7,6 +7,7 @@ import Players from "../../Classes/player_class.tsx"
 export default function Play() {
   const [playersNumber, setPlayerNumbers] = useState(0);
   const [play, setPlay] = useState(false);
+  const [players, setPlayers] = useState({});
 
   const playersOnChange = (e) => {
     if (e.target.value > 6) {
@@ -31,8 +32,7 @@ export default function Play() {
           <Input id={`players${i}`} type="text" class = {{}} onChange={playerNameChange} text={`Player ${i+1} name`} name={`playerName${i}`} placeholder="Player Name"/>
           ))}
           </div>
-          <Button text="Play"/>
-          
+          <Button text="Play" onClick={playerNameChange}/>
         </div>
         ) : (
         <div>
