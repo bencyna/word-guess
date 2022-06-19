@@ -7,17 +7,21 @@ import Players from "../../Classes/player_class.tsx"
 export default function Play() {
   const [playersNumber, setPlayerNumbers] = useState(0);
   const [play, setPlay] = useState(false);
-  const [players, setPlayers] = useState([{}]);
+  const players = {};
 
   const playersOnChange = (e) => {
     if (e.target.value > 6) {
       e.target.value = 6
     }
+    if (e.target.value < playersNumber) {
+      
+    }
     setPlayerNumbers(e.target.value);
   }
 
   const setPlayerState = (e) => {
-    
+    players[e.target.name] = e.target.value;
+    console.log(players)
   }
 
   const initiateGame = (e) => {
@@ -38,7 +42,7 @@ export default function Play() {
           <Input type="number" class = {{}} onChange={playersOnChange} value={playersNumber} text="Number of players" name="playersNumber" id="playersNumber" placeholder="0"/>
           <div className="players">
           {Array.apply(null, {length: playersNumber}).map((e, i) => (
-          <Input id={`players${i}`} type="text" class = {{}} text={`Player ${i+1} name`} onChange={setPlayerState} name={`playerName${i}`} placeholder="Player Name"/>
+          <Input id={`players${i}`} key={`players-${i}`} type="text" class = {{}} text={`Player ${i+1} name`} onChange={setPlayerState} name={`playerName${i}`} placeholder="Player Name"/>
           ))}
           </div>
           <Button text="Play" onClick={initiateGame}/>
