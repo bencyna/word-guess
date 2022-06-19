@@ -7,6 +7,7 @@ import Players from "../../Classes/player_class.tsx"
 export default function Play() {
   const [playersNumber, setPlayerNumbers] = useState(0);
   const [play, setPlay] = useState(false);
+  const [players, setPlayers] = useState([{}]);
 
   const playersOnChange = (e) => {
     if (e.target.value > 6) {
@@ -15,12 +16,16 @@ export default function Play() {
     setPlayerNumbers(e.target.value);
   }
 
-  const playerNameChange = (e) => {
+  const setPlayerState = (e) => {
+    
+  }
+
+  const initiateGame = (e) => {
     // add to list of players
     // find best way to add dynamic input to state
     for (let i = 0; i<=playersNumber; i++) {
       // create player object
-      
+      const newPlayer = new Player()
     }
   }
 
@@ -33,10 +38,10 @@ export default function Play() {
           <Input type="number" class = {{}} onChange={playersOnChange} value={playersNumber} text="Number of players" name="playersNumber" id="playersNumber" placeholder="0"/>
           <div className="players">
           {Array.apply(null, {length: playersNumber}).map((e, i) => (
-          <Input id={`players${i}`} type="text" class = {{}} onChange={playerNameChange} text={`Player ${i+1} name`} name={`playerName${i}`} placeholder="Player Name"/>
+          <Input id={`players${i}`} type="text" class = {{}} text={`Player ${i+1} name`} onChange={setPlayerState} name={`playerName${i}`} placeholder="Player Name"/>
           ))}
           </div>
-          <Button text="Play" onClick={playerNameChange}/>
+          <Button text="Play" onClick={initiateGame}/>
         </div>
         ) : (
         <div>
